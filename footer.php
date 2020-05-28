@@ -1,7 +1,7 @@
 <footer>
 
 	<div class="logo">
-		<a href="/"><img src="<?php echo get_assets_path(); ?>/images/common/footer_logo.svg" alt="FLAT HACHINOHE | フラット八戸"></a>
+		<a href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/footer_logo.svg" alt="FLAT HACHINOHE | フラット八戸"></a>
 	</div>
 
 	<div class="menu">
@@ -22,11 +22,11 @@
 
 </footer>
 
-<script src="<?php echo get_assets_path(); ?>/js/loaded.js"></script>
-<script src="<?php echo get_assets_path(); ?>/js/responsiveimage.js"></script>
-<script src="<?php echo get_assets_path(); ?>/js/scroll.js"></script>
-<script src="<?php echo get_assets_path(); ?>/js/sidemenu.js"></script>
-<script src="<?php echo get_assets_path(); ?>/js/spremovehover.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/loaded.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/responsiveimage.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/scroll.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/sidemenu.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/spremovehover.js"></script>
 
 </body>
 </html>

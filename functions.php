@@ -1,5 +1,5 @@
 <?php
-
+/*
 // アイキャッチ設定
 add_theme_support('post-thumbnails');
 
@@ -95,7 +95,9 @@ function get_event_date($date_format)
 * $pages : 全ページ数
 * $range : 左右に何ページ表示するか
 * $show_only : 1ページしかない時に表示するかどうか
-*/
+ */
+
+/*
 function pagination( $pages, $paged, $range = 3, $show_only = false ) {
     $showitems = ($range * 2) + 1; // 表示する個数
     $pages     = ( int ) $pages;   // float型で渡ってくるので明示的に int型 へ
@@ -152,3 +154,4 @@ add_filter( 'query_vars', function($vars){
     $vars[] = "date";
     return $vars;
 });
+ */
