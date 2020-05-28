@@ -1,0 +1,31 @@
+html {
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+@media (max-width: 567px) {
+	html,
+	img {
+		font-size: 4vw;
+	}
+}
+
+@media (min-width: 568px) {
+	html,
+	img {
+		font-size: 2vw;
+	}
+}
+
+@media (min-width: 1000px) {
+	html,
+	img {
+		font-size: 20px;
+	}
+}
+@media (min-width: 1280px) {
+	html,
+	img {
+		font-size: 1.5625vw; /* calc(100vw / 1280 * 20) */;
+	}
+}

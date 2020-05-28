@@ -1,0 +1,737 @@
+/* ==================== base.css ==================== */
+
+html {
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	font-family: 'Roboto', 'Noto Sans JP', 'Helvetica', 'Hiragino Kaku Gothic Pro', Meiryo, sans-serif;
+	font-weight: 300;
+	-webkit-font-feature-settings: 'palt';
+	font-feature-settings: 'palt';
+	letter-spacing: 0.04em;
+	line-height: 1.6;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+i.material-icons {
+	font-size: inherit;
+}
+
+img {
+	max-width: 100%;
+	vertical-align: bottom;
+}
+
+p {
+	text-align: justify;
+	line-height: 1.8;
+}
+
+button {
+	cursor: pointer;
+	outline: none;
+}
+
+
+@media (max-width: 567px) {
+	body {
+		font-size: 13px;
+	}
+}
+@media (min-width: 568px) {
+	body {
+		font-size: 0.7rem;
+	}
+}
+
+
+/* ==================== classes.css ==================== */
+
+.fl8-btn-black {
+	background: linear-gradient(black, black) no-repeat 100% 0%;
+	background-size: 200% 100%;
+	color: white;
+	transition:
+		background-image 0 50ms,
+		background-position 400ms 50ms;
+}
+.fl8-btn-black:hover {
+	background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.0) 50%);
+	background-position: 0% 0%;
+}
+
+.fl8-btn-white {
+	position: relative;
+	border: 0.5px solid black;
+}
+.fl8-btn-white::after {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-family: 'Material Icons';
+	transition: all 250ms;
+}
+
+.fl8-btn-white.forward::after {
+	right: 0.5em;
+	content: 'chevron_right';
+}
+.fl8-btn-white.back::after {
+	left: 0.5em;
+	content: 'chevron_left';
+}
+
+.fl8-btn-white:not(:hover)::after {
+	opacity: 0;
+}
+
+
+@keyframes hover {
+	0% {
+		background-size: 0.2rem 100%;
+		color: rgba(255,255,255,0);
+	}
+	100% {
+		background-size: 100% 100%;
+		color: rgba(255,255,255,1);
+	}
+}
+
+
+/* ==================== contents.css ==================== */
+
+.Contents section {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.Contents h2 {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	padding: 0.6em;
+	margin: 2.5em 0;
+	line-height: 1.4;
+}
+.Contents h2 [lang="ja"] {
+	font-size: 57%;
+	order: 1;
+}
+.Contents h2 [lang="en" ] {
+	letter-spacing: 0.25em;
+	font-family: 'Poppins';
+}
+
+/* border */
+.Contents h2::before,
+.Contents h2::after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	height: 0.2rem;
+	background: black;
+}
+.Contents h2::before {
+	top: 0;
+	width: 100%;
+}
+.Contents h2::after {
+	bottom: 0;
+	width: 50%;
+	order: 2;
+}
+
+@media (max-width: 567px) {
+	.Contents {
+		padding: 0 1rem;
+	}
+}
+
+@media (min-width: 568px) {
+
+	.Contents {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		align-self: center;
+		width: 100%;
+		max-width: 51.2rem;
+		box-sizing: border-box;
+		padding: 0 1rem;
+	}
+
+	body:not(.index) .Contents h2 {
+		font-size: 175%;
+	}
+
+}
+
+
+/* ==================== footer.css ==================== */
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: black;
+	color: white;
+	transition: opacity 400ms 200ms;
+	margin-top: 3em;
+	padding: 4rem 0;
+}
+
+footer .menu {
+	margin: 3rem 0;
+}
+
+footer .menu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+footer .menu a {
+	display: flex;
+	align-items: center;
+	padding: 0 1em;
+	white-space: nowrap;
+	font-weight: 400;
+}
+
+footer .menu a::before {
+	content: '■';
+	transform: scale(0.7);
+}
+
+footer address {
+	font-style: normal;
+	opacity: 0.3;
+}
+
+
+@media (max-width: 567px) {
+
+	footer .menu ul {
+		display: grid;
+		grid-template-columns: repeat(2, max-content);
+		grid-gap: 1em;
+	}
+
+}
+
+@media (min-width: 568px) {
+
+	footer .menu ul {
+		display: flex;
+		font-size: 85%;
+	}
+
+	footer address {
+		font-size: 85%;
+	}
+
+}
+
+
+/* ==================== generalmenu.css ==================== */
+
+.GeneralMenu {
+	margin-top: 3rem;
+}
+
+.GeneralMenu ul {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-weight: 400;
+	line-height: 2.5;
+}
+
+.GeneralMenu li {
+	border: 0.5px solid black;
+	border-width: 0 1px;
+}
+.GeneralMenu li:nth-of-type(n+2) {
+	border-left: none;
+}
+
+.GeneralMenu li a {
+	padding: 0 1em;
+}
+
+@media (max-width: 567px) {
+	.GeneralMenu ul {
+		justify-content: center;
+	}
+}
+
+@media (min-width: 568px) {
+	.GeneralMenu ul {
+		justify-content: flex-end;
+		font-size: 115%;
+	}
+}
+
+
+/* ==================== head.css ==================== */
+
+.Head {
+	margin: 3rem 0;
+}
+
+
+.Head .pankuzu ul {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.Head .pankuzu a {
+	display: flex;
+	align-items: center;
+}
+
+.Head .pankuzu li:nth-of-type(1) a {
+	font-size: 120%;
+}
+
+.Head .pankuzu li:nth-of-type(n+2) a {
+	padding-left: 0.5em;
+}
+.Head .pankuzu li:nth-of-type(n+2) a::before {
+	display: inline-block;
+	content: 'chevron_right';
+	margin-right: 0.25em;
+	font-family: 'Material Icons';
+}
+
+
+.Head .title {
+	display: flex;
+	margin-top: 0.5rem;
+}
+.Head .title h1 {
+	border-left: 0.3rem solid black;
+	margin: 0;
+	padding-left: 0.75rem;
+	display: flex;
+	flex-direction: column;
+	line-height: 1.4;
+}
+.Head .title h1 [lang="ja"] {
+	font-size: 50%;
+	order: 1;
+}
+.Head .title h1 [lang="en"] {
+	font-family: 'Poppins';
+	letter-spacing: 0.1em;
+}
+
+@media (max-width: 567px) {
+	.Head .title h1 {
+		font-size: 250%;
+	}
+}
+
+@media (min-width: 768px) {
+	.Head .title h1 {
+		font-size: 300%;
+	}
+}.Head .pankuzu {
+	padding-left: 0.75rem;
+	border-left: 0.3rem solid black;
+}
+
+
+/* ==================== header.css ==================== */
+
+body.index header .logo {
+	display: none;
+}
+
+header nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+header nav a {
+	display: flex;
+	align-items: center;
+	padding: 0 1em;
+	white-space: nowrap;
+	font-weight: 400;
+}
+
+header nav > ul > li > a {
+	position: relative;
+	padding-left: 1.2em;
+}
+header nav > ul > li > a::before {
+	position: absolute;
+	left: 0;
+}
+
+header nav > ul > li:not(.home) > a::before {
+	content: '■';
+	transform: scale(0.7);
+}
+
+
+header nav > ul > li.home > a::before {
+	content: 'home';
+	transform: scale(1.25);
+	font-family: 'Material Icons';
+}
+
+
+header nav li ul a::before {
+	content: 'chevron_right';
+	margin-right: 0.5em;
+	font-family: 'Material Icons';
+}
+
+@media (max-width: 567px) {
+
+	header {
+		display: flex;
+		align-items: center;
+		box-sizing: border-box;
+		height: 4rem;
+		padding: 1rem;
+	}
+	body.index header {
+		position: relative;
+		z-index: 10;
+		height: 0;
+		padding: 0;
+	}
+
+	header .logo {
+		width: 40%;
+	}
+
+	header .menu {
+		position: fixed;
+		z-index: 10;
+		right: 0;
+		top: 0;
+	}
+
+	header nav {
+		display: flex;
+		justify-content: flex-end;
+		padding: 1.5rem;
+		font-size: 115%;
+	}
+
+	header nav > ul > li {
+		padding: 0 0.75em;
+		border-bottom: 0.5px solid black;
+		line-height: 3;
+	}
+	header nav > ul > li > a {
+		font-weight: 400;
+	}
+
+	header nav li ul {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		margin-bottom: 1em;
+	}
+
+	header nav li li {
+		font-size: 85%;
+	}
+
+	header nav li li a {
+		line-height: 2;
+	}
+
+	header .menu button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 4rem;
+		height: 4rem;
+		border: none;
+		background: none;
+		font-size: 2rem;
+	}
+	header .menu button i {
+		position: absolute;
+	}
+
+
+	/* open / close */
+	header .menu:not(.open) {
+		background: none;
+		width: 0;
+		height: 0;
+	}
+	header .menu.open {
+		width: 100%;
+		height: 100%;
+		background: rgba(255,255,255,0.98);
+		transition: background 200ms ease;
+	}
+
+	header .menu:not(.open) nav {
+		visibility: hidden;
+		opacity: 0;
+		transform: translateX(1rem);
+	}
+	header .menu.open nav {
+		visibility: visible;
+		opacity: 1;
+		transform: none;
+		transition: all 400ms ease 100ms;
+	}
+
+	header .menu.open button i:nth-of-type(1),
+	header .menu:not(.open) button i:nth-of-type(2) {
+		visibility: hidden;
+		transform: scale(0.5);
+	}
+	header .menu.open button i:nth-of-type(2),
+	header .menu:not(.open) button i:nth-of-type(1) {
+		visibility: visible;
+		transform: none;
+		transition: all 400ms ease;
+	}
+
+}
+
+
+@media (min-width: 568px) {
+
+	header {
+		display: flex;
+		position: relative;
+		z-index: 1;
+		align-items: center;
+		justify-content: center;
+		padding: 1rem;
+	}
+	header .logo {
+		position: absolute;
+		left: 1rem;
+		width: 7rem;
+		line-height: 0;
+	}
+
+	header nav > ul {
+		display: flex;
+		font-size: 85%;
+	}
+	header nav > ul > li {
+		position: relative;
+		margin-left: 0.4em;
+	}
+	header nav > ul > li.home {
+		display: none;
+	}
+	header nav ul ul {
+		position: absolute;
+		left: 1em;
+		padding: 0 0.75em;
+		background: black;
+		color: white;
+		white-space: nowrap;
+		transition: all 400ms;
+	}
+
+	header nav ul li:not(.open) ul {
+		visibility: hidden;
+		margin-top: -0.5em;
+		opacity: 0;
+	}
+
+	header nav ul li.open ul {
+		visibility: visible;
+		margin-top: 0;
+		opacity: 1;
+	}
+
+	header nav li li {
+		border-top: 0.5px solid rgba(255,255,255,0.5);
+	}
+
+	header nav a {
+		line-height: 2.75;
+	}
+
+
+	header .menu button {
+		display: none;
+	}
+}
+
+
+/* ==================== loaded.css ==================== */
+
+body:not(.loaded) {
+	opacity: 0;
+}
+body.loaded {
+	opacity: 1;
+	transition: opacity 400ms ease;
+}
+
+
+/* ==================== sidemenu.css ==================== */
+
+.Sidemenu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.Sidemenu a {
+	display: flex;
+	align-items: center;
+}
+
+.Sidemenu a::before {
+	content: 'keyboard_arrow_down';
+	margin-right: 0.25em;
+	font-family: 'Material Icons';
+}
+
+
+/* scroll */
+
+.Sidemenu.scroll {
+	display: flex;
+	overflow: visible;
+	position: fixed;
+	z-index: 9;
+	right: 0;
+	width: 0;
+	height: 0;
+}
+
+.Sidemenu.scroll nav,
+.Sidemenu.scroll button {
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: black;
+	color: white;
+}
+
+.Sidemenu.scroll nav {
+	white-space: nowrap;
+}
+
+.Sidemenu.scroll nav ul {
+	padding: 0.5rem 0.75rem;
+	padding-right: 2.5rem;
+}
+.Sidemenu.scroll nav li {
+	line-height: 2.75;
+}
+.Sidemenu.scroll nav li:nth-of-type(n+2) {
+	border-top: 0.5px solid rgba(255,255,255,0.5);
+}
+
+.Sidemenu.scroll li a {
+	padding: 0 0.25em;
+}
+
+.Sidemenu.scroll button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2rem;
+	height: 4rem;
+	border: none;
+	margin: 0;
+	padding: 0;
+	font-size: inherit;
+	outline: none;
+}
+.Sidemenu.scroll button i {
+	font-size: 200%;
+}
+.Sidemenu:not(.scroll) button {
+	display: none;
+}
+
+
+/* open / close */
+
+.Sidemenu.scroll:not(.open) nav {
+	transform: translateX(100%);
+}
+.Sidemenu.scroll.open nav {
+	transform: none;
+	transition: transform 400ms;
+}
+
+.Sidemenu.open button i {
+	transition: transform 400ms ease;
+	transform: rotate(-180deg);
+}
+
+
+@media (max-width: 567px) {
+}
+
+
+@media (min-width: 568px) {
+
+	/* normal */
+	.Sidemenu:not(.scroll) nav ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+	}
+	.Sidemenu:not(.scroll) nav li {
+		margin-left: 2em;
+		line-height: 2.25;
+		font-weight: 400;
+	}
+
+	/* scroll */
+	.Sidemenu.scroll {
+		animation-name: sidemenu-scroll;
+		animation-duration: 800ms;
+		animation-iteration-count: 1;
+	}
+
+}
+
+
+@keyframes sidemenu-scroll {
+	from {
+		transform: translateY(-50vh);
+	}
+	to {
+		transform: none;
+	}
+}

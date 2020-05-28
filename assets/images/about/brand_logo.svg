@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="33.45" viewBox="0 0 512 33.45">
+  <defs>
+    <symbol id="新規シンボル_2" data-name="新規シンボル 2" viewBox="0 0 481.89 31.48">
+      <rect x="149.55" width="65.87" height="6.57"/>
+      <rect x="149.55" y="15.23" width="32.93" height="6.57"/>
+      <rect x="332.47" width="44.59" height="6.57"/>
+      <rect x="137.72" width="6.57" height="31.48"/>
+      <rect x="235.91" y="24.91" width="65.87" height="6.57"/>
+      <rect x="224.09" width="6.57" height="31.48"/>
+      <rect x="435.2" y="15.26" width="6.57" height="16.22"/>
+      <polygon points="384.72 15.26 400.91 31.45 391.61 31.45 381.99 21.82 327.54 21.82 317.91 31.45 308.61 31.45 324.8 15.26 384.72 15.26"/>
+      <rect x="395.09" width="86.8" height="6.57"/>
+      <rect width="110.17" height="6.61"/>
+      <rect y="24.87" width="55.09" height="6.61"/>
+    </symbol>
+  </defs>
+  <g id="レイヤー_2" data-name="レイヤー 2">
+    <g id="レイヤー_1-2" data-name="レイヤー 1">
+      <use id="brand_logo" width="481.89" height="31.48" transform="scale(1.06)" xlink:href="#新規シンボル_2"/>
+    </g>
+  </g>
+</svg>

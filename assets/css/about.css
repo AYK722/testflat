@@ -1,0 +1,332 @@
+/* ==================== 1_common.css ==================== */
+
+.About div {
+	display: flex;
+	flex-direction: column;
+}
+
+.About h3 {
+	display: flex;
+	flex-wrap: wrap;
+	line-height: 1.4;
+	border-left: 0.2rem solid black;
+	padding: 0.4em 0.6em;
+}
+
+.Area h3 {
+	border: none;
+	padding: 0;
+}
+
+.Brand h3,
+.Utility h3 {
+	align-self: center;
+	border-left: none;
+	border-bottom: 0.2rem solid black;
+}
+
+@media (max-width: 567px) {
+	.About .body {
+		margin: 0 1.5rem 0 1rem;
+	}
+	.About h3:not(:first-child) {
+		margin-top: 2.5em;
+	}
+}
+
+@media (min-width: 568px) {
+
+	.About .body {
+		align-self: center;
+		width: 75%;
+	}
+
+	.About h3 {
+		font-size: 125%;
+	}
+	.About h3:not(:first-child) {
+		margin-top: 3em;
+	}
+}
+
+
+/* ==================== area.css ==================== */
+
+.Area .body figure {
+	margin: 0;
+}
+
+.Area .body:not(.top) {
+	margin-top: 3rem;
+}
+
+.Area h3 {
+	flex-direction: column;
+}
+
+.Area h3 img[src$="area_logo_1.svg"] {width: 23.7em;}
+.Area h3 img[src$="area_logo_2.svg"] {width: 18.95em;}
+.Area h3 img[src$="area_logo_3.svg"] {width: 28.34em;}
+.Area h3 img[src$="area_logo_4.svg"] {width: 26.43em;}
+
+
+.Area ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-size: 85%;
+}
+.Area li {
+	display: flex;
+}
+.Area li::before {
+	content: '・';
+	margin-right: 0.25em;
+}
+.Area li:nth-of-type(n+2) {
+	margin-top: 0.5em;
+}
+
+@media (max-width: 567px) {
+
+	.Area h3 {
+		align-items: center;
+	}
+	.Area h3 img {
+		font-size: 0.8rem;
+	}
+	.Area h3 span {
+		margin-top: 0.75em;
+	}
+}
+
+@media (min-width: 568px) {
+	.Area h3 {
+		position: relative;
+	}
+	
+	.Area h3 span {
+		position: absolute;
+		top: 100%;
+		margin-top: 2rem;
+	}
+	
+	.Area .body:not(.top) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 1rem 2rem;
+	}
+
+	.Area .body h3,
+	.Area .body ul {
+		grid-column: 1/3;
+	}
+	
+	.Area .body p {
+		padding-top: 2rem;
+		order: 1;
+	}
+	.Area .body figure {
+		order: 2;
+	}
+	.Area .body ul {
+		order: 3;
+	}
+	
+}
+
+
+/* ==================== brand.css ==================== */
+
+.Brand .logo {
+	align-self: center;
+	margin: 2rem 0;
+}
+.Brand .logo figure {
+	margin: 0;
+}
+.Brand .logo figure img {
+	width: 100%;
+}
+
+.Brand p:last-child {
+	align-self: flex-end;
+}
+
+@media (max-width: 567px) {
+	.Brand .logo {
+		width: 100%;
+	}
+}
+
+@media (min-width: 568px) {
+	.Brand .logo {
+		width: 66.6%;
+	}
+}
+
+
+/* ==================== hachinohe.css ==================== */
+
+.Hachinohe .logo {
+	margin: 2rem auto;
+	align-self: center;
+}
+.Hachinohe .logo img {
+	width: 100%;
+}
+
+.Hachinohe .logo figure {
+	margin: 0;
+}
+
+@media (max-width: 567px) {
+	.Hachinohe .logo {
+		width: 100%;
+	}
+}
+
+@media (min-width: 568px) {
+	.Hachinohe .logo {
+		width: 66.6%;
+	}
+}
+
+
+/* ==================== info.css ==================== */
+
+.Info .body:nth-of-type(n+2) {
+	margin-top: 2rem;
+}
+
+.Info dl {
+	display: grid;
+	grid-gap: 0.5em 0;
+	grid-template-columns: max-content auto;
+}
+
+.Info dd {
+	margin-left: 2em;
+}
+
+.Info dl dd::before {
+	content: '：';
+	position: absolute;
+	transform: translateX(-1em);
+}
+
+@media (min-width: 568px) {
+	.Info .body {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		align-items: start;
+	}
+}
+
+
+/* ==================== message.css ==================== */
+
+.Message p:last-child {
+	align-self: flex-end;
+}
+
+
+/* ==================== strategy.css ==================== */
+
+@media (max-width: 567px) {
+	.Strategy figure {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+
+/* ==================== team.css ==================== */
+
+.Team h3 {
+	padding-right: 2em;
+	position: relative;
+}
+
+.Team h3 a {
+	display: flex;
+	flex-wrap: wrap;
+	transition: opacity 200ms;
+}
+
+.Team h3 a:hover {
+	opacity: 0.4;
+}
+
+.Team h3 a::after {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	content: 'open_in_new';
+	font-family: 'Material Icons';
+	font-size: 160%;
+}
+
+.Team p.message {
+	position: relative;
+	padding: 0 1em;
+	font-weight: 400;
+}
+.Team p.message::before,
+.Team p.message::after {
+	content: '“';
+	position: absolute;
+	font-family: 'Noto Sans JP';
+}
+
+.Team p.message::before {
+	left: 0;
+	transform: scale(2);
+}
+.Team p.message::after {
+	transform: translate(0.5em, -0.25em) rotate(180deg) scale(2);
+}
+
+@media (max-width: 567px) {
+	.Team h3 a::after {
+		font-size: 125%;
+	}
+}
+
+@media (min-width: 568px) {
+	.Team h3 a::after {
+		font-size: 160%;
+	}
+}
+
+
+/* ==================== utility.css ==================== */
+
+.Utility .body dl {
+	display: grid;
+	grid-template-columns: max-content auto;
+	font-size: 85%;
+}
+
+.Utility .body dd {
+	margin-left: 0.5em;
+}
+
+@media (max-width: 567px) {
+	.Utility .body h4 {
+		align-self: center;
+	}
+}
+
+@media (min-width: 568px) {
+	
+	.Utility .body > div {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+	}
+	.Utility .body h4 {
+		grid-column: 1;
+		grid-row: 1/3;
+	}
+}

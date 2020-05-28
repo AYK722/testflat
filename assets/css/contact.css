@@ -1,0 +1,234 @@
+/* ==================== contact.css ==================== */
+
+.Contact {
+	display: flex;
+	flex-direction: column;
+}
+
+
+/* ==================== form.css ==================== */
+
+.Contact .form form {
+	display: flex;
+	flex-direction: column;
+}
+
+.Contact .form input[type="text"],
+.Contact .form input[type="email"],
+.Contact .form input[type="tel"],
+.Contact .form textarea,
+.Contact .form button {
+	font-size: inherit;
+	font-family: inherit;
+}
+
+.Contact .form input[type="text"],
+.Contact .form input[type="email"],
+.Contact .form input[type="tel"],
+.Contact .form textarea {
+	background: rgba(0,0,0,0.08);
+	border: none;
+	border-radius: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+
+.Contact .form dd {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.Contact .form dt em {
+	border: 0.5px solid black;
+	white-space: nowrap;
+	padding: 0 0.5em;
+	font-size: 75%;
+	font-style: normal;
+	line-height: 2;
+}
+
+.Contact .form label {
+	display: block;
+	line-height: 2;
+	cursor: pointer;
+}
+
+
+.Contact .form .name input {
+	width: 10em;
+}
+.Contact .form .company input {
+	width: 15em;
+}
+.Contact .form .email input {
+	width: 20em;
+}
+.Contact .form .tel input {
+	width: 10em;
+}
+
+.Contact .form .content span {
+	width: 100%;
+}
+.Contact .form textarea {
+	width: 100%;
+	height: 15em;
+	line-height: 1.6;
+}
+
+/* 送信 */
+.Contact .form dl + p {
+	text-align: center;
+}
+
+.Contact .form input[type="submit"] {
+	align-self: center;
+	display: flex;
+	align-items: center;
+	border: none;
+	margin: 2rem auto;
+	padding: 0 3em;
+	font-size: 125%;
+	line-height: 3;
+	letter-spacing: 1em;
+	text-indent: 1em;
+	outline: none;
+}
+
+/* メッセージ */
+.wpcf7-response-output {
+	font-weight: 400;
+	text-align: center;
+}
+.wpcf7-validation-errors {
+	color: red;
+}
+
+
+@media (max-width: 567px) {
+
+	.Contact .form input[type="text"],
+	.Contact .form input[type="email"],
+	.Contact .form input[type="tel"],
+	.Contact .form textarea {
+		max-width: 100%;
+		padding: 1em;
+		font-size: 16px;
+	}
+
+	.Contact .form dt {
+		display: flex;
+		align-items: center;
+		margin-top: 2rem;
+		font-weight: 400;
+		border-left: 0.2rem solid black;
+		padding-left: 0.5em;
+	}
+	.Contact .form dt em {
+		margin-left: 0.5em;
+		font-weight: 300;
+	}
+
+	.Contact .form dd {
+		margin: 1rem 1rem 0;
+	}
+}
+
+
+@media (min-width: 568px) {
+
+	.Contact .form {
+		align-self: center;
+		width: 75%;
+	}
+
+	.Contact .form input[type="text"],
+	.Contact .form input[type="email"],
+	.Contact .form input[type="tel"],
+	.Contact .form textarea {
+		padding: 1em;
+	}
+
+	.Contact .form dl {
+		display: grid;
+		grid-template-columns: max-content auto;
+		grid-gap: 1rem 0;
+		align-items: center;
+		padding-left: 3.5em;
+	}
+
+	.Contact .form dt {
+		position: relative;
+	}
+
+	.Contact .form dt:nth-of-type(5),
+	.Contact .form dt:nth-of-type(6) {
+		align-self: start;
+	}
+
+	.Contact .form dt em {
+		position: absolute;
+		right: 100%;
+		top: 50%;
+		transform: translate(-1em, -50%);
+	}
+
+}
+
+
+/* ==================== phone.css ==================== */
+
+.Contact .phone {
+	display: flex;
+	flex-direction: column;
+	margin-top: 2rem;
+}
+
+.Contact .phone h3 {
+	align-self: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	border-bottom: 0.2rem solid black;
+	padding: 0.25em;
+	line-height: 1.4;
+}
+
+.Contact .phone dl {
+}
+
+.Contact .phone dt {
+	font-size: 150%;
+}
+
+.Contact .phone dd {
+	margin: 0 0 0 0.5em;
+}
+
+@media (max-width: 567px) {
+	.Contact .phone dl {
+		align-self: center;
+		display: grid;
+		grid-gap: 0.5rem 0;
+		grid-template-columns: max-content auto;
+		align-items: center;
+		font-size: 150%;
+	}
+}
+
+@media (min-width: 568px) {
+
+	.Contact .phone dl {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 200%;
+	}
+
+
+	.Contact .phone dt:nth-of-type(n+2) {
+		margin-left: 1em;
+	}
+
+}
