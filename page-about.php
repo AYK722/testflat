@@ -3,13 +3,6 @@
 Template Name: about
 */
 
-$body_class = 'about';
-$page_assets = '<link rel="stylesheet" type="text/css" href="'.get_assets_path().'/css/about.css">';
-
-$meta_title = '施設概要';
-$meta_description = 'FLAT HACHINOHEの施設概要をご紹介します。';
-$meta_keywords = '八戸,フラット,FLAT,フラット八戸、八戸アリーナ、フラットアリーナ、アイスアリーナ';
-
 get_header();
 ?>
 
@@ -91,7 +84,7 @@ get_header();
 
 			<div class="logo">
 				<figure>
-                <img src="<?php echo get_assets_path(); ?>/images/about/brand_logo.svg" alt="FLAT ロゴ">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about/brand_logo.svg" alt="FLAT ロゴ">
 				</figure>
 			</div>
 
@@ -123,7 +116,7 @@ get_header();
 
 			<div class="logo">
 				<figure>
-					<img src="<?php echo get_assets_path(); ?>/images/about/hachinohe_logo.svg" alt="FLAT HACHINOHE | フラット八戸 ロゴ">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/about/hachinohe_logo.svg" alt="FLAT HACHINOHE | フラット八戸 ロゴ">
 				</fugure>
 			</div>
 
@@ -164,19 +157,19 @@ get_header();
 
 		<div class="body top">
 			<figure>
-				<img src="<?php echo get_assets_path(); ?>/images/about/area_image_top.jpg" alt="FLAT HACHINOHE 鳥瞰イメージ">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/about/area_image_top.jpg" alt="FLAT HACHINOHE 鳥瞰イメージ">
 			</figure>
 		</div>
 
 		<div class="body area1">
 
 			<h3>
-				<img src="<?php echo get_assets_path(); ?>/images/about/area_logo_1.svg" alt="FLAT ARENAフラットアリーナ ロゴ">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/about/area_logo_1.svg" alt="FLAT ARENAフラットアリーナ ロゴ">
 				<span>FLAT ARENAフラットアリーナ</span>
 			</h3>
 
 			<figure>
-				<img src="<?php echo get_assets_path(); ?>/images/about/area_image_1.jpg" alt="FLAT ARENAフラットアリーナ イメージ">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/about/area_image_1.jpg" alt="FLAT ARENAフラットアリーナ イメージ">
 			</figure>
 
 			<p>
@@ -195,12 +188,12 @@ get_header();
 		<div class="body area2">
 
 			<h3>
-				<img src="<?php echo get_assets_path(); ?>/images/about/area_logo_2.svg" alt="FLAT-Xフラットクロス ロゴ">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/about/area_logo_2.svg" alt="FLAT-Xフラットクロス ロゴ">
 				<span>FLAT-Xフラットクロス</span>
 			</h3>
 
 			<figure>
-				<img src="<?php echo get_assets_path(); ?>/images/about/area_image_2.jpg" alt="FLAT-Xフラットクロス イメージ">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/about/area_image_2.jpg" alt="FLAT-Xフラットクロス イメージ">
 			</figure>
 
 			<p>
@@ -217,12 +210,12 @@ get_header();
 		<div class="body area3">
 
 			<h3>
-				<img src="<?php echo get_assets_path(); ?>/images/about/area_logo_3.svg" alt="FLAT SPACEフラットスペース ロゴ">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/about/area_logo_3.svg" alt="FLAT SPACEフラットスペース ロゴ">
 				<span>FLAT SPACEフラットスペース</span>
 			</h3>
 
 			<figure>
-				<img src="<?php echo get_assets_path(); ?>/images/about/area_image_3.jpg" alt="FLAT SPACEフラットスペース イメージ">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/about/area_image_3.jpg" alt="FLAT SPACEフラットスペース イメージ">
 			</figure>
 
 			<p>
@@ -239,12 +232,12 @@ get_header();
 		<div class="body area4">
 
 			<h3>
-				<img src="<?php echo get_assets_path(); ?>/images/about/area_logo_4.svg" alt="FLAT PARKフラットパーク ロゴ">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/about/area_logo_4.svg" alt="FLAT PARKフラットパーク ロゴ">
 				<span>FLAT PARKフラットパーク</span>
 			</h3>
 
 			<figure>
-				<img src="<?php echo get_assets_path(); ?>/images/about/area_image_4.jpg" alt="FLAT PARKフラットパーク イメージ">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/about/area_image_4.jpg" alt="FLAT PARKフラットパーク イメージ">
 			</figure>
 
 			<p>
@@ -278,7 +271,7 @@ get_header();
 				これまでのように、100%行政主導による施設の建築・運営や、一部の指定民間事業者が運営を請け負うといった方式とは異なり、民間事業者としての私たちが建築・運営を総合プロデュースし、地元行政が必要な期間・部分だけを使用するという、全く新しい未来型のビジョンを持ったスキームです。これまで日本になかった「行政による民間施設の利活用」というスタイルは、これからの地方都市のあり方にフィットし、コストや人的資源の効率的な活用という面においても優れた効果を実現し、地域の新たな賑わいを創出していきます。
 			</p>
 			<figure>
-				<img src="<?php echo get_assets_path(); ?>/images/about/strategy_scheme.svg" alt="FLAT HACHINOHEの官民連携スキーム">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/about/strategy_scheme.svg" alt="FLAT HACHINOHEの官民連携スキーム">
 			</figure>
 
 			<h3><span>スポーツを核に</span><span>「地域の魅力」を咲かせていく</span></h3>
