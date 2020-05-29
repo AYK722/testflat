@@ -1,4 +1,73 @@
 <?php
+
+//カスタム投稿タイプの追加
+add_action('init', 'create_post_type');
+function create_post_type() {
+
+    //カスタム投稿タイプ・ニュース
+    register_post_type(
+        'news',
+        array(
+        'labels' => array(
+            'name' => _x('ニュース', 'post type general name'),
+            'singular_name' => _x('ニュース', 'post type singular name'),
+            'add_new' => _X('新規追加', 'news'),
+            'ass_new_item' => __('ニュース'),
+            'edit_item' => __('編集'),
+            'new_item' => __('新規ニュース'),
+            'view_item' => __('表示'),
+            'search_items' => __('項目検索'),
+            'not_found' => __('記事が見つかりません'),
+            'not_found_in_trash' => __('ゴミ箱に記事はありません'),
+            'parent_item_colon' => ''
+            ),
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'menu_position' => 5,
+        'has_archive' => true,
+        'rewrite' => array( 'slug' => 'news'),
+        'supports' => array('title', 'editor', 'thumbnail')
+        )
+    );
+
+    //カスタム投稿タイプ・イベント
+    register_post_type(
+        'events',
+        array(
+        'labels' => array(
+            'name' => _x('イベント', 'post type general name'),
+            'singular_name' => _x('イベント', 'post type singular name'),
+            'add_new' => _X('新規追加', 'news'),
+            'ass_new_item' => __('イベント'),
+            'edit_item' => __('編集'),
+            'new_item' => __('新規イベント'),
+            'view_item' => __('表示'),
+            'search_items' => __('項目検索'),
+            'not_found' => __('記事が見つかりません'),
+            'not_found_in_trash' => __('ゴミ箱に記事はありません'),
+            'parent_item_colon' => ''
+            ),
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'menu_position' => 5,
+        'has_archive' => true,
+        'rewrite' => array( 'slug' => 'events'),
+        'supports' => array('title', 'editor', 'thumbnail')
+        )
+    );
+}
+
+
 /*
 // アイキャッチ設定
 add_theme_support('post-thumbnails');

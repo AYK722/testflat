@@ -22,7 +22,8 @@ get_header();
 			<dl>
                 <dt>NEWS</dt>
                 <?php
-                    $arg = array('category_name' => 'news');
+                   // $arg = array('category_name' => 'news');
+                    $arg = array('post_type' => 'news');
                     $news_posts = get_posts($arg);
                 ?>
                 <?php foreach ($news_posts as $post): ?>
@@ -44,7 +45,8 @@ get_header();
 			<h2>イベント情報</h2>
             <ul>
                 <?php
-                    $arg = array('category_name' => 'events');
+                   // $arg = array('category_name' => 'events');
+                    $arg = array('post_type' => 'events');
                     $event_posts = get_posts($arg);
                 ?>
                 <?php foreach($event_posts as $post): ?>
