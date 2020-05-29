@@ -1,15 +1,8 @@
 <?php
-/*
-$body_class = 'index';
-$page_assets = '<link rel="stylesheet" type="text/css" href="'.get_assets_path().'/css/index.css">';
 
-$meta_title = 'FLAT HACHINOHE';
-$meta_description = 'FLAT HACHINOHEは、青森県八戸市のJR八戸駅西地区に設立された、多くの市民に愛され「氷都・八戸」のシンボルであるアイスホッケー、アイススケートを中心とした様々なスポーツをはじめ、学校教育や地域行事にも活用していただくなど、すべての人に開かれた優れたユーティリティを備える、日本初となる真の多目的空間となります。';
-$meta_keywords = '八戸,フラット,FLAT,フラット八戸、八戸アリーナ、フラットアリーナ、アイスアリーナ';
- */
 get_header();
-?>
 
+?>
 
 <main class="Contents">
 

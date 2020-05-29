@@ -28,5 +28,7 @@
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/sidemenu.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/spremovehover.js"></script>
 
+<?php wp_footer(); ?>
+
 </body>
 </html>

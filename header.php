@@ -37,6 +37,8 @@
 		gtag('config', 'UA-128036866-1');
 	</script>
 
+    <?php wp_head(); ?>
+
 </head>
 <body class="index" onclick="try{querySelector('header .menu li.open').classList.remove('open')}catch(e){}">
 <!-- Google Tag Manager (noscript) -->
