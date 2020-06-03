@@ -29,16 +29,14 @@ get_header();
                 <?php foreach ($news_posts as $post): ?>
 				<dd class="news-item">
                 <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
-                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                <a href="<?php the_permalink(); ?>"><?php the_field('news_sb'); ?><?php the_field('news_cb'); ?><?php the_field('news_rb'); ?>
+                    <?php the_title(); ?></a>
                 </dd>
                 <?php endforeach; ?>
 			</dl>
-			<a class="fl8-btn-black" href="/news">全てのNEWSを見る</a>
+			<a class="fl8-btn-black" href="/news/">全てのNEWSを見る</a>
 		</div>
-
 	</div>
-
-
 
 	<div class="body">
 		<div class="events">
@@ -50,11 +48,18 @@ get_header();
                     $event_posts = get_posts($arg);
                 ?>
                 <?php foreach($event_posts as $post): ?>
+                <?php //var_dump($post); ?>
+                <?php //the_field('custom_rb'); ?>
                 <li>
-					<span class="icon"><i class="material-icons">record_voice_over</i>コンサート</span>
+                    <?php if (get_field('custom_rb') == 'コンサート') : ?>
+					    <span class="icon"><i class="material-icons">record_voice_over</i>コンサート</span>
+                    <?php else : ?>
+                        <span class="icon"><i class="material-icons">directions_run</i>スポーツ<br>（<?php the_field('custom_cb'); ?>）</span>
+                    <?php endif; ?>
                     <a href="<?php the_permalink(); ?>">
                     <time><?php the_time('Y.m.d'); ?></time>
-                    <?php the_title(); ?>
+                    <?php the_field('custom_title'); ?>
+                    <?php the_field('custom_content'); ?>
 					</a>
 				</li>
                 <?php endforeach; ?>
