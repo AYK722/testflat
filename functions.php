@@ -3,6 +3,30 @@
 // アイキャッチ設定
 add_theme_support('post-thumbnails');
 
+// ニュースの一覧取得
+function get_news_posts($limit = -1)
+{
+    $args = [
+        'post_type' => 'news',
+        // デフォルトは全件表示
+        'posts_per_page' => $limit,
+        'post_status' => 'publish',
+    ];
+    return new WP_Query($args);
+}
+
+// イベントの一覧取得
+function get_events_posts($limit = -1)
+{
+    $args = [
+        'post_type' => 'events',
+        'posts_per_page' => $limit,
+        'post_status' => 'publish',
+    ];
+    return new WP_Query($args);
+}
+
+
 // ページネーションの設定
 function pagination( $pages, $paged, $range = 2, $show_only = false ) {
 

@@ -43,10 +43,7 @@ get_header();
 	</div>
 	<h2>2020年4月のイベント</h2>
     
-    <?php
-        $arg = array('post_type' => 'events');
-        $events_posts = new WP_Query($arg);
-    ?>
+    <?php $events_posts = get_events_posts(); ?>
     <?php foreach($events_posts->posts as $post): ?>
 	<ul>
 		<li>
@@ -57,6 +54,7 @@ get_header();
             <?php endif; ?>
             <a href="<?php the_permalink(); ?>">
                 <time><?php the_time('Y年m月d日'); ?></time>
+                <?php the_title(); ?>
                 <?php the_field('flex_content_text'); ?>
 			</a>
 		</li>

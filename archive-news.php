@@ -37,10 +37,7 @@ get_header();
 	<div class="list">
 
         <ul>
-            <?php
-                $arg = array('post_type' => 'news');
-                $news_posts = new WP_Query($arg);
-            ?>
+            <?php $news_posts = get_news_posts(9); ?>
             <?php foreach($news_posts->posts as $post): ?>
                 <li>
                 <?php //var_dump($post); ?>

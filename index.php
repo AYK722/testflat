@@ -21,12 +21,8 @@ get_header();
 		<div class="news" id="news">
 			<dl>
                 <dt>NEWS</dt>
-                <?php
-                   // $arg = array('category_name' => 'news');
-                    $arg = array('post_type' => 'news');
-                    $news_posts = get_posts($arg);
-                ?>
-                <?php foreach ($news_posts as $post): ?>
+                <?php $news_posts = get_news_posts(3); ?>
+                <?php foreach ($news_posts->posts as $post): ?>
 				<dd class="news-item">
                 <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
                 <a href="<?php the_permalink(); ?>"><?php the_field('news_sb'); ?><?php the_field('news_cb'); ?><?php the_field('news_rb'); ?>
@@ -42,14 +38,8 @@ get_header();
 		<div class="events">
 			<h2>イベント情報</h2>
             <ul>
-                <?php
-                   // $arg = array('category_name' => 'events');
-                    $arg = array('post_type' => 'events');
-                    $event_posts = get_posts($arg);
-                ?>
-                <?php foreach($event_posts as $post): ?>
-                <?php //var_dump($post); ?>
-                <?php //the_field('custom_rb'); ?>
+                <?php $event_posts = get_events_posts(3); ?>
+                <?php foreach($event_posts->posts as $post): ?>
                 <li>
                     <?php if (get_field('custom_rb') == 'コンサート') : ?>
 					    <span class="icon"><i class="material-icons">record_voice_over</i>コンサート</span>
@@ -58,7 +48,7 @@ get_header();
                     <?php endif; ?>
                     <a href="<?php the_permalink(); ?>">
                     <time><?php the_time('Y.m.d'); ?></time>
-                    <?php the_field('custom_title'); ?>
+                    <?php the_title(); ?>
                     <?php the_field('custom_content'); ?>
 					</a>
 				</li>
@@ -87,7 +77,7 @@ get_header();
 				</li>
 				<li>
 					<a href="https://www.toda.co.jp/" target="_blank">
-						<img src="<?php echo get_template_directory_uri(); ?>/assete/images/index/sponsor_logo_toda.png" alt="戸田建設">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/sponsor_logo_toda.png" alt="戸田建設">
 				</li>
 				<li>
 					<a href="http://www.denon-eng.co.jp/" target="_blank">
