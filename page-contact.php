@@ -32,7 +32,10 @@ get_header();
 <div class="Contact">
 
 	<div class="form">
-        <?php echo do_shortcode('[contact-form-7 id="133" title="テストフォーム"]'); ?>
+        <?php
+            //echo do_shortcode('[contact-form-7 id="133" title="テストフォーム"]');
+            echo do_shortcode('[mwform_formkey key="138"]');
+        ?>
     </div>
 
 	<div class="phone">

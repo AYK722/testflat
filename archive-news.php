@@ -45,7 +45,11 @@ get_header();
                 <li>
                 <?php //var_dump($post); ?>
                 <a href="<?php the_permalink(); ?>">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/news/sampleimage_thum.jpg" alt="">
+                    <?php if (has_post_thumbnail()) : ?>
+                        <?php the_post_thumbnail(array(100,100)); ?>
+                    <?php else : ?>
+					    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/news/noimage.png" width="100" height="100" alt="">
+                    <?php endif ; ?>
                     <?php the_title(); ?>
                     <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y/m/d'); ?></time>
                     <small><?php the_excerpt(); ?></small>

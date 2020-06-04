@@ -1,4 +1,9 @@
 <?php
+
+// アイキャッチ設定
+add_theme_support('post-thumbnails');
+
+// ページネーションの設定
 function pagination( $pages, $paged, $range = 2, $show_only = false ) {
 
     $pages = ( int ) $pages;    //float型で渡ってくるので明示的に int型 へ
@@ -52,8 +57,9 @@ function pagination( $pages, $paged, $range = 2, $show_only = false ) {
         echo '</div>';
     }
 }
+
 //カスタム投稿タイプの追加
-/*
+
 add_action('init', 'create_post_type');
 function create_post_type() {
 
@@ -119,11 +125,8 @@ function create_post_type() {
         )
     );
 }
- */
 
 /*
-// アイキャッチ設定
-add_theme_support('post-thumbnails');
 
 // アセットのパス取得
 function get_assets_path()

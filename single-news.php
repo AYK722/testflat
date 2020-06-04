@@ -35,11 +35,15 @@ get_header();
 
 	<div class="body">
 		<p>
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/news/sampleimage.jpg" alt="">
+            <?php if (has_post_thumbnail()) : ?>
+                <?php the_post_thumbnail(array(300,300)); ?>
+            <?php else : ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/news/noimage.png" width="300" height="300" alt="">
+            <?php endif ; ?>
 		</p>
 	
-        <p><?php the_content(); ?>
-            <?php //the_excerpt(); ?>
+        <p>
+            <?php the_excerpt(); ?>
 		</p>	
 	</div>
 
